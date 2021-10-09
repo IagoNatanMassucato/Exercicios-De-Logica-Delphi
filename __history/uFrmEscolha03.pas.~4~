@@ -1,0 +1,49 @@
+unit uFrmEscolha03;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmEscolha03 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    edtSaldo: TEdit;
+    btnLimpar: TButton;
+    btnCalcular: TButton;
+    procedure btnLimparClick(Sender: TObject);
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmEscolha03: TfrmEscolha03;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmEscolha03.btnCalcularClick(Sender: TObject);
+var idade : integer;
+    mens : string;
+begin
+    idade := StrToInt(edtIdade.Text);
+    case idade of
+
+    end;
+
+end;
+
+procedure TfrmEscolha03.btnLimparClick(Sender: TObject);
+begin
+  edtSaldo.Clear;
+  edtSaldo.SetFocus;
+end;
+
+end.

@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 423
+  ClientWidth = 606
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 21
+  object Label1: TLabel
+    Left = 232
+    Top = 32
+    Width = 137
+    Height = 32
+    Caption = 'Exerc'#237'cio 01'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 80
+    Width = 553
+    Height = 137
+    AutoSize = False
+    Caption = 
+      'Formul'#225'rio  para  determinar  se  o indiv'#237'duo  est'#225'  com  um  pe' +
+      'so  favor'#225'vel.  Essa situa'#231#227'o '#233' determinada atrav'#233's do IMC ('#205'ndi' +
+      'ce de Massa Corp'#243'rea), que '#233' definida como sendo a  rela'#231#227'o  ent' +
+      're  o  peso  (PESO)  e  o  quadrado  da  Altura  (ALTURA)  do  i' +
+      'ndiv'#237'duo.  Em  seguida verificar a situa'#231#227'o do peso:'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    WordWrap = True
+  end
+  object Image1: TImage
+    Left = 240
+    Top = 248
+    Width = 105
+    Height = 105
+  end
+end

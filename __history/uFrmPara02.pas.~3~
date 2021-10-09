@@ -1,0 +1,60 @@
+unit uFrmPara02;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPara02 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    edtNumero: TEdit;
+    memPar: TMemo;
+    btnLimpar: TButton;
+    btnCalcular: TButton;
+    procedure btnLimparClick(Sender: TObject);
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPara02: TfrmPara02;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPara02.btnCalcularClick(Sender: TObject);
+var i : integer;
+begin
+    try
+    if (i < 10) or (i > 40) then
+        raise Exception.Create('Valor inválido');
+        memPar.Clear;
+    for i := 0 to 50 do
+    if i mod 2 = 0 then
+
+    memPar.Lines.Add(IntToStr(i mod 2 = 0));
+    except
+    Application.MessageBox('Informe um valor válido de 0 a 50',
+     'Problemas ao calcular', MB_ICONWARNING);
+
+  end;
+
+
+end;
+
+procedure TfrmPara02.btnLimparClick(Sender: TObject);
+begin
+  edtNumero.Clear;
+  edtNumero.SetFocus;
+  memPar.Clear;
+end;
+
+end.

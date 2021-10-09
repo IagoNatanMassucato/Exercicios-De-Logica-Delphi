@@ -1,0 +1,62 @@
+unit uFrmSe02;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.jpeg;
+
+type
+  TfrmSe02 = class(TForm)
+    Image1: TImage;
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    edtTime: TEdit;
+    edtRival: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Label6: TLabel;
+    Label7: TLabel;
+    edtTgols: TEdit;
+    edtRgols: TEdit;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSe02: TfrmSe02;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmSe02.Button1Click(Sender: TObject);
+begin
+  edtTime.Clear;
+  edtRival.Clear;
+  edtTime.SetFocus;
+end;
+
+procedure TfrmSe02.Button2Click(Sender: TObject);
+var time, rival, mens : string;
+    tGols, rGols : integer;
+begin
+    tGols := StrToInt(edtTgols.Text);
+    rGols := StrToInt(edtRgols.Text);
+    if tGols > rGols then
+       mens :=  mens + #13 + edtTime.Text
+    else
+       mens := mens + #13 + edtRival.Text;
+    Application.MessageBox(PWideChar(mens), 'Time vencedor');
+end;
+
+end.

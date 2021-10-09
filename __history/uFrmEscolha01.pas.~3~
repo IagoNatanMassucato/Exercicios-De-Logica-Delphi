@@ -1,0 +1,33 @@
+unit uFrmEscolha01;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TfrmEscolha01 = class(TForm)
+    lblExercício: TLabel;
+    lblTexto: TLabel;
+    img: TImage;
+    lblPeso: TLabel;
+    lblAltura: TLabel;
+    edtPeso: TEdit;
+    edtAltura: TEdit;
+    btnLimpar: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmEscolha01: TfrmEscolha01;
+
+implementation
+
+{$R *.dfm}
+
+end.

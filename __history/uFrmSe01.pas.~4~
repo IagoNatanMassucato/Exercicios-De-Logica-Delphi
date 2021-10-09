@@ -1,0 +1,47 @@
+unit uFrmSe01;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmSe01 = class(TForm)
+    lblExercício: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtNome: TEdit;
+    Edit2: TEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    edtNota1: TEdit;
+    edtNota2: TEdit;
+    edtNota3: TEdit;
+    btnLimpar: TButton;
+    btnCalcular: TButton;
+    procedure btnLimparClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSe01: TfrmSe01;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmSe01.btnLimparClick(Sender: TObject);
+begin
+  edtNome.Clear;
+  edtNota1.Clear;
+  edtNota2.Clear;
+  edtNota3.Clear;
+  edtNota1.SetFocus;
+end;
+
+end.

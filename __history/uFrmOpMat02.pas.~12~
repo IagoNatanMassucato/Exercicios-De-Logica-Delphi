@@ -1,0 +1,68 @@
+unit uFrmOpMat02;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TfrmOpMat02 = class(TForm)
+    lblExercício02: TLabel;
+    imgCalculo: TImage;
+    lblExercício: TLabel;
+    edtLetraA: TEdit;
+    edtLetraB: TEdit;
+    edtLetraC: TEdit;
+    lblValorA: TLabel;
+    lblValorB: TLabel;
+    lblValorC: TLabel;
+    btnCalcular: TButton;
+    btnLimpar: TButton;
+    procedure btnLimparClick(Sender: TObject);
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmOpMat02: TfrmOpMat02;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmOpMat02.btnCalcularClick(Sender: TObject);
+var letraA, letraB, letraC, letraR, letraS, letraD, quadrado: integer;
+     mens1, mens2, mens3 : string;
+begin
+   letraA := StrToInt(edtLetraA.Text);
+   letraB := StrToInt(edtLetraB.Text);
+   letraC := StrToInt(edtLetraC.Text);
+   quadrado := 2;
+   letraR := (letraA + letraB) * quadrado;
+   letraS := (letraB + letraC) * quadrado;
+   letraD := (letraR + letraS) Div quadrado;
+   mens1 := edtLetraA.Text + ' + ' + edtLetraB.Text + ' X 2 ' +
+           IntToStr(quadrado) + ' = ' + IntToStr(letraR);
+   mens2 := edtLetraB.Text + ' + ' + edtLetraC.Text + ' X 2 ' +
+           IntToStr(quadrado)+ ' = ' + IntToStr(letraS);
+   mens3 := IntToStr(letraR) + ' + ' + IntToStr(letraS) + ' % ' +
+           IntToStr(quadrado) + ' = ' + IntToStr(letraD);
+   Application.MessageBox(PWideChar(mens1, mens2, mens3), ' Resultado ',
+    MB_ICONINFORMATION);
+
+end;
+
+procedure TfrmOpMat02.btnLimparClick(Sender: TObject);
+begin
+  edtLetraA.Clear;
+  edtLetraB.Clear;
+  edtLetraC.Clear;
+  edtLetraA.SetFocus;
+end;
+
+end.

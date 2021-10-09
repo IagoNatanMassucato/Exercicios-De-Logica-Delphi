@@ -1,0 +1,30 @@
+unit uFrmSe03;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmSe03 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    edtSalario: TEdit;
+    btnLimpar: TButton;
+    btnCalcular: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSe03: TfrmSe03;
+
+implementation
+
+{$R *.dfm}
+
+end.
