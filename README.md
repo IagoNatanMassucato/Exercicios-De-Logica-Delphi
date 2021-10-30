@@ -1,2 +1,2 @@
 # Exercicios-De-Logica-Delphi
-Exercícios de lógica desenvolvido no Delphi, comandos Condicionais e Repetição
+Exercícios de lógica desenvolvido com Delphi, comandos Condicionais e Repetição
